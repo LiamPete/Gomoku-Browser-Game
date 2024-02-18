@@ -1,0 +1,9 @@
+#board {
+    display: grid;
+    grid-template-columns: repeat(15, 40px);
+    grid-template-rows: repeat(15, 40px);
+    gap: 1px;
+    background-color: beige;
+    outline: solid 1px red;
+
+}
