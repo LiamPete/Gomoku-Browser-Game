@@ -7,3 +7,32 @@
     outline: solid 1px red;
 
 }
+
+.button1 {
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: burlywood;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.button1:hover{
+    background-color:rgb(190, 160, 119);
+}
+
+.button1:active{
+    background-color:rgb(190, 160, 119) ;
+    box-shadow: 0 5px #666;;
+    transform: translateY(4px);
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+}
