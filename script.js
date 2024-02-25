@@ -88,4 +88,3 @@ function resetBoard() {
   });
   currentPlayer = 'X';
 }
-
