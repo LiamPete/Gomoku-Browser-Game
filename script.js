@@ -2,6 +2,7 @@ const boardSize = 15;
 let currentPlayer = 'X';
 const board = new Array(boardSize).fill(null).map(() => new Array(boardSize).fill(null));
 
+
 const boardElement = document.getElementById('board');
 initializeBoard();
 
@@ -25,6 +26,8 @@ function handleCellClick(event) {
   if (board[row][col] === null) {
     board[row][col] = currentPlayer;
     event.target.innerText = currentPlayer;
+
+    event.target.classList.add(currentPlayer === 'X' ? 'x-cell' : 'o-cell');
 
     if (checkWin(row, col)) {
       alert(`${currentPlayer} wins!`);
@@ -81,6 +84,8 @@ function resetBoard() {
   board.forEach(row => row.fill(null));
   document.querySelectorAll('.cell').forEach(cell => {
     cell.innerText = '';
+    cell.classList.remove('x-cell', 'o-cell');
   });
   currentPlayer = 'X';
 }
+

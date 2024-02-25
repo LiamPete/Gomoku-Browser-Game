@@ -13,7 +13,7 @@
     width: 40px;
     height: 40px;
     border: 1px solid #000;
-    background-color: #43a047;
+    background-color: #FAEDCD;
 }
 
 
@@ -21,14 +21,14 @@
     text-align: center;
     padding: 1em;
     margin: auto;
-    background-color: rgb(14, 68, 14);
+    background-color: #CCD5AE;
 }
 
 .body2 {
     margin-top: 10em;
     display: flex;
     justify-content: center;
-    background-color: #2196f3;
+    background-color: #E9EDC9;
     
 
 }
@@ -41,7 +41,7 @@
     text-decoration: none;
     outline: none;
     color: rgb(0, 0, 0);
-    background-color: burlywood;
+    background-color: #D4A373;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;
@@ -60,12 +60,15 @@
     
 }
 
-.cell.X {
-    background-color: #000;
+.x-cell {
+    background-color: #0e0d0d;
+   
 }
 
-.cell.O {
+.o-cell {
     background-color: white;
+    color: white;
+    
 }
 
 a {
