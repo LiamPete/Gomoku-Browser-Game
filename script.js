@@ -1,5 +1,5 @@
 const boardSize = 15;
-let currentPlayer = 'X';
+let currentPlayer = 'Black';
 const board = new Array(boardSize).fill(null).map(() => new Array(boardSize).fill(null));
 
 
@@ -32,13 +32,13 @@ function handleCellClick(event) {
     board[row][col] = currentPlayer;
     event.target.innerText = currentPlayer;
 
-    event.target.classList.add(currentPlayer === 'X' ? 'x-cell' : 'o-cell');
+    event.target.classList.add(currentPlayer === 'Black' ? 'Black' : 'White');
 
     if (checkWin(row, col)) {
       showOverlay(`${currentPlayer} wins!`);
       resetBoard();
     } else {
-      currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+      currentPlayer = currentPlayer === 'Black' ? 'White' : 'Black';
     }
   } else {
     alert('Cell already occupied. Choose another one.');
@@ -89,9 +89,9 @@ function resetBoard() {
   board.forEach(row => row.fill(null));
   document.querySelectorAll('.cell').forEach(cell => {
     cell.innerText = '';
-    cell.classList.remove('x-cell', 'o-cell');
+    cell.classList.remove('Black', 'White');
   });
-  currentPlayer = 'X';
+  currentPlayer = 'Black';
 }
 
 
