@@ -15,6 +15,11 @@ function initializeBoard() {
       cell.dataset.col = j;
       cell.addEventListener('click', handleCellClick);
       boardElement.appendChild(cell);
+      const overlayText = document.getElementById('overlay-text');
+      overlayText.addEventListener('click', () => {
+      hideOverlay();
+      resetBoard();
+});
     }
   }
 }
@@ -30,7 +35,7 @@ function handleCellClick(event) {
     event.target.classList.add(currentPlayer === 'X' ? 'x-cell' : 'o-cell');
 
     if (checkWin(row, col)) {
-      alert(`${currentPlayer} wins!`);
+      showOverlay(`${currentPlayer} wins!`);
       resetBoard();
     } else {
       currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
@@ -87,4 +92,17 @@ function resetBoard() {
     cell.classList.remove('x-cell', 'o-cell');
   });
   currentPlayer = 'X';
+}
+
+
+function showOverlay(message){
+  const overlay = document.getElementById('overlay');
+  const overlayText = document.getElementById('overlay-text');
+  overlayText.innerText = message;
+  overlay.style.display = 'flex';
+}
+
+function hideOverlay() {
+  const overlay = document.getElementById('overlay');
+  overlay.style.display = 'none';
 }
