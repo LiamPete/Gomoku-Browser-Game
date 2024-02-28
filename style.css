@@ -21,17 +21,24 @@
     text-align: center;
     padding: 1em;
     margin: auto;
-    background-color: #CCD5AE;
+    background-image: url(imgs/eddie-sundgren-Y90MI--vSuI-unsplash.jpg);
+    
+
+
 }
 
 .body2 {
     margin-top: 10em;
     display: flex;
     justify-content: center;
-    background-color: #E9EDC9;
-    
-
 }
+
+/* .back-img{
+    background-image: url(imgs/eddie-sundgren-Y90MI--vSuI-unsplash.jpg);
+    height: 1000px;
+    margin: 0px;
+    padding: 0;
+} */
 
 .button1 {
     padding: 15px 25px;
@@ -86,7 +93,7 @@ h1 {
     text-transform: capitalize;
     margin-top: 100px;
     margin-bottom: 10px;
-    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #678083, #43a047, #eeff41, #f9a825, #ff5722);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
